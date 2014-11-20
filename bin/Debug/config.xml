@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<appSettings>
+  <add key="Telescope Prog ID" value="" />
+  <add key="Focuser Prog ID" value="" />
+  <add key="Server IP" value="192.168.161.2" />
+  <add key="Server Port" value="4000" />
+ </appSettings>
+</configuration>

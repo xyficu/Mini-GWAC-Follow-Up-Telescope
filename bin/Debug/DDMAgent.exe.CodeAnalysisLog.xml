@@ -1,0 +1,1101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Namespaces>
+  <Namespace Name="DDMAgent">
+   <Messages>
+    <Message Id="DDM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="85" Level="Error">更正命名空间名称“DDMAgent”中“DDM”的大小写，将其改为“Ddm”。</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="D:\工作项目\60cm望远镜\DDMAgent\bin\Debug\DDMAgent.exe">
+   <Modules>
+    <Module Name="ddmagent.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">用强名称密钥对 'DDMAgent.exe' 进行签名。</Issue>
+      </Message>
+      <Message Id="DDM" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">更正程序集名称 'DDMAgent.exe' 中“DDM”的大小写，将其改为“Ddm”。</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">使用 CLSCompliant(true)来标记 'DDMAgent.exe'，因为它公开外部可见的类型。</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Warning">由于程序集 'DDMAgent.exe' 包含基于 ResX 的资源文件，因此请使用 NeutralResourcesLanguage 特性来标记它，并指定该程序集内的资源所采用的语言。这会改进首次检索资源时的查找性能。</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="DDMAgent">
+       <Types>
+        <Type Name="AstroArith" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#.ctor(System.Double,System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="18">'AstroArith.AstroArith(double, double, double)' 似乎没有上游 public 或 protected 调用方。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#cosd(System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="112">从未使用 'AstroArith.cosd(double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DD2DMS(System.Double,System.Int32&amp;,System.Int32&amp;,System.Double&amp;,System.String&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="365">从未使用 'AstroArith.DD2DMS(double, ref int, ref int, ref double, ref string)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#frac(System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="57">从未使用 'AstroArith.frac(double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetEpoch(System.Int32,System.Int32,System.Int32,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="336">从未使用 'AstroArith.GetEpoch(int, int, int, double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HH2HMS(System.Double,System.Int32&amp;,System.Int32&amp;,System.Double&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="348">从未使用 'AstroArith.HH2HMS(double, ref int, ref int, ref double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#m_matPN" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="Member" TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="25" Level="Warning">'AstroArith.m_matPN' 是多维数组。如有可能，请使用交错数组来替代它。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#m_vSiteAlt" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'AstroArith.m_vSiteAlt' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#m_vSiteLgt" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'AstroArith.m_vSiteLgt' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ModifiedJulianDay(System.Int32,System.Int32,System.Int32,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="70">从未使用 'AstroArith.ModifiedJulianDay(int, int, int, double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Rect2Sphere(System.Double,System.Double,System.Double,System.Double&amp;,System.Double&amp;,System.Double&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="250">从未使用 'AstroArith.Rect2Sphere(double, double, double, ref double, ref double, ref double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#reduce(System.Double,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="117">从未使用 'AstroArith.reduce(double, double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#sind(System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="107">从未使用 'AstroArith.sind(double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Sphere2Rect(System.Double,System.Double,System.Double,System.Double&amp;,System.Double&amp;,System.Double&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="266">从未使用 'AstroArith.Sphere2Rect(double, double, double, ref double, ref double, ref double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#StringDegree2Double(System.String,System.Double&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="462">从未使用 'AstroArith.StringDegree2Double(string, ref double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="529">由于 'Convert.ToDouble(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AstroArith.StringDegree2Double(string, ref double)' 中的此调用替换为对 'Convert.ToDouble(string, IFormatProvider)' 的调用。如果 'Convert.ToDouble(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="529">由于 'Convert.ToDouble(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AstroArith.StringDegree2Double(string, ref double)' 中的此调用替换为对 'Convert.ToDouble(string, IFormatProvider)' 的调用。如果 'Convert.ToDouble(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="529">由于 'Convert.ToDouble(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AstroArith.StringDegree2Double(string, ref double)' 中的此调用替换为对 'Convert.ToDouble(string, IFormatProvider)' 的调用。如果 'Convert.ToDouble(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#StringHour2Double(System.String,System.Double&amp;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="387">从未使用 'AstroArith.StringHour2Double(string, ref double)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="449">由于 'Convert.ToDouble(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AstroArith.StringHour2Double(string, ref double)' 中的此调用替换为对 'Convert.ToDouble(string, IFormatProvider)' 的调用。如果 'Convert.ToDouble(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="449">由于 'Convert.ToDouble(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AstroArith.StringHour2Double(string, ref double)' 中的此调用替换为对 'Convert.ToDouble(string, IFormatProvider)' 的调用。如果 'Convert.ToDouble(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="AstroArith.cs" Line="449">由于 'Convert.ToDouble(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AstroArith.StringHour2Double(string, ref double)' 中的此调用替换为对 'Convert.ToDouble(string, IFormatProvider)' 的调用。如果 'Convert.ToDouble(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="desc_telescope_position" Kind="Struct" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="desc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'desc_telescope_position' 中“desc”的大小写，将其改为“Desc”。</Issue>
+          </Message>
+          <Message Id="position" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'desc_telescope_position' 中“position”的大小写，将其改为“Position”。</Issue>
+          </Message>
+          <Message Id="telescope" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'desc_telescope_position' 中“telescope”的大小写，将其改为“Telescope”。</Issue>
+          </Message>
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">从类型名称 'desc_telescope_position' 中移除下划线。</Issue>
+          </Message>
+          <Message TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+           <Issue Name="Equals" Certainty="75" Level="Warning">'desc_telescope_position' 应重写 Equals。</Issue>
+           <Issue Name="op_Equality" Certainty="75" Level="Warning">'desc_telescope_position' 应重写相等(==)和不等(!=)运算符。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#vAltitude" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vAltitude' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vLatitude" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vLatitude' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vLongitude" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vLongitude' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vRealAlt" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vRealAlt' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vRealAzi" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vRealAzi' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vRealDEC" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vRealDEC' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vRealRA" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vRealRA' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vST" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vST' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vTargetAlt" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vTargetAlt' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vTargetAzi" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vTargetAzi' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vTargetDEC" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vTargetDEC' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#vTargetRA" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.vTargetRA' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wDay" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wDay' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wHour" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wHour' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wMilliSecond" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wMilliSecond' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wMinute" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wMinute' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wMonth" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wMonth' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wSecond" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wSecond' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wSize" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wSize' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wState" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wState' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wType" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wType' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wYear" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'desc_telescope_position.wYear' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmMain" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="frm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'frmMain' 中“frm”的大小写，将其改为“Frm”。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotUseTimersThatPreventPowerStateChanges" Category="Microsoft.Mobility" CheckId="CA1601" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="172">修改方法 'frmMain.frmMain()' 中对 'Timer.Interval.set(int)' 的调用以将计时器间隔设置为大于或等于 1 秒的值。</Issue>
+             <Issue Certainty="90" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="174">修改方法 'frmMain.frmMain()' 中对 'Timer.Interval.set(int)' 的调用以将计时器间隔设置为大于或等于 1 秒的值。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="178">由于 'Convert.ToInt32(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.frmMain()' 中的此调用替换为对 'Convert.ToInt32(string, IFormatProvider)' 的调用。如果 'Convert.ToInt32(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="183">方法 'frmMain.frmMain()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "+00:00:00.0"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="182">方法 'frmMain.frmMain()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "00:00:00.00"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="180">方法 'frmMain.frmMain()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "未连接"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnFindHome_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="517">方法 'frmMain.btnFindHome_Click(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "搜索零点..."。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnPark_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="527">方法 'frmMain.btnPark_Click(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "复位..."。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnSlew_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="544">更改 'frmMain.btnSlew_Click(object, EventArgs)' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="549">更改 'frmMain.btnSlew_Click(object, EventArgs)' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="570">更改 'frmMain.btnSlew_Click(object, EventArgs)' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="581">方法 'frmMain.btnSlew_Click(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "指向..."。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="549">方法 'frmMain.btnSlew_Click(object, EventArgs)' 将一个文本字符串作为对 'MessageBox.Show(string)' 的调用的参数“text”传递。改为从资源表检索以下字符串: "赤纬输入格式错误!"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="544">方法 'frmMain.btnSlew_Click(object, EventArgs)' 将一个文本字符串作为对 'MessageBox.Show(string)' 的调用的参数“text”传递。改为从资源表检索以下字符串: "赤经输入格式错误!"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="570">方法 'frmMain.btnSlew_Click(object, EventArgs)' 将一个文本字符串作为对 'MessageBox.Show(string)' 的调用的参数“text”传递。改为从资源表检索以下字符串: "超出水平限位范围!"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ConnectFocus()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="283">更改 'frmMain.ConnectFocus()' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+            </Message>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="286">使用“String.IsNullOrEmpty”调用来替换 'frmMain.ConnectFocus()' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="279">使用“String.IsNullOrEmpty”调用来替换 'frmMain.ConnectFocus()' 中的 'string.operator ==(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="282">使用“String.IsNullOrEmpty”调用来替换 'frmMain.ConnectFocus()' 中的 'string.operator ==(string, string)' 调用。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="283">方法 'frmMain.ConnectFocus()' 将一个文本字符串作为对 'MessageBox.Show(string)' 的调用的参数“text”传递。改为从资源表检索以下字符串: "Could not find \'ACCServer.Focuser\'"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ConnectTelescope()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="235">更改 'frmMain.ConnectTelescope()' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+            </Message>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="230">使用“String.IsNullOrEmpty”调用来替换 'frmMain.ConnectTelescope()' 中的 'string.operator ==(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="233">使用“String.IsNullOrEmpty”调用来替换 'frmMain.ConnectTelescope()' 中的 'string.operator ==(string, string)' 调用。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="253">方法 'frmMain.ConnectTelescope()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "静止"。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="235">方法 'frmMain.ConnectTelescope()' 将一个文本字符串作为对 'MessageBox.Show(string)' 的调用的参数“text”传递。改为从资源表检索以下字符串: "Cound not find \'Astrooptik Server Telescope\'"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#desc_position_struct2bytes(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">'frmMain.desc_position_struct2bytes(object)' 调入具有 LinkDemand 的 'Marshal.AllocHGlobal(int)'。通过此调用，'Marshal.AllocHGlobal(int)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'&#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">'frmMain.desc_position_struct2bytes(object)' 调入具有 LinkDemand 的 'Marshal.Copy(IntPtr, byte[], int, int)'。通过此调用，'Marshal.Copy(IntPtr, byte[], int, int)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'&#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">'frmMain.desc_position_struct2bytes(object)' 调入具有 LinkDemand 的 'Marshal.FreeHGlobal(IntPtr)'。通过此调用，'Marshal.FreeHGlobal(IntPtr)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'&#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">'frmMain.desc_position_struct2bytes(object)' 调入具有 LinkDemand 的 'Marshal.SizeOf(object)'。通过此调用，'Marshal.SizeOf(object)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'&#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">'frmMain.desc_position_struct2bytes(object)' 调入具有 LinkDemand 的 'Marshal.StructureToPtr(object, IntPtr, bool)'。通过此调用，'Marshal.StructureToPtr(object, IntPtr, bool)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'&#xD;&#xA;   -&gt;'frmMain.desc_position_struct2bytes(object)'</Issue>
+            </Message>
+            <Message Id="bytes" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">更正成员名称 'frmMain.desc_position_struct2bytes(object)' 中“bytes”的大小写，将其改为“Bytes”。</Issue>
+            </Message>
+            <Message Id="desc" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">更正成员名称 'frmMain.desc_position_struct2bytes(object)' 中“desc”的大小写，将其改为“Desc”。</Issue>
+            </Message>
+            <Message Id="position" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">更正成员名称 'frmMain.desc_position_struct2bytes(object)' 中“position”的大小写，将其改为“Position”。</Issue>
+            </Message>
+            <Message Id="struct" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">更正成员名称 'frmMain.desc_position_struct2bytes(object)' 中“struct”的大小写，将其改为“Struct”。</Issue>
+            </Message>
+            <Message Id="obj" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">在成员 'frmMain.desc_position_struct2bytes(object)' 中，考虑将参数名称 'obj' 中的数据类型标识符“obj”替换为一个更通用的词条，如“value”。</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">从成员名称 'frmMain.desc_position_struct2bytes(object)' 中移除下划线。</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="156">从未使用 'frmMain.desc_position_struct2bytes(object)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Dispose(System.Boolean)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="IFocus" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="15">'frmMain' 包含 IDisposable 类型的字段 'frmMain.IFocus': 'Focuser'。请更改 'frmMain' 的 Dispose 方法，使其针对该字段调用 Dispose 或 Close。</Issue>
+            </Message>
+            <Message Id="IScope" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="15">'frmMain' 包含 IDisposable 类型的字段 'frmMain.IScope': 'Telescope'。请更改 'frmMain' 的 Dispose 方法，使其针对该字段调用 Dispose 或 Close。</Issue>
+            </Message>
+            <Message Id="m_sckClient" TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="15">'frmMain' 包含 IDisposable 类型的字段 'frmMain.m_sckClient': 'TcpClient'。请更改 'frmMain' 的 Dispose 方法，使其针对该字段调用 Dispose 或 Close。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="717">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "+"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="810">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "+"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="643">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "+00:00:00.0"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="728">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "-"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="799">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "-"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="547">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "000:00:00.0"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="212">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "00:00:00.0"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="236">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "00:00:00.0"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="571">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "00:00:00.0"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="619">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "00:00:00.00"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="260">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "2011-01-01"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="595">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "Freeze"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="826">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "Mini-GWAC Follow Up Telescope"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="740">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "label12"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="115">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "menuStrip1"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="223">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "世界时:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="394">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "东"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="374">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "东北"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="364">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "东南"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="582">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "俯仰:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="425">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "停  止"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="404">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "北"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="414">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "南"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="507">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "历元:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="484">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "复  位"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="751">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "当前位置(mm)："。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="247">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "恒星时:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="518">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "指  向"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="687">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "指定位置移动(mm):"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="328">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "控制操作"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="460">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "搜索零点"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="558">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "方位:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="271">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "日  期:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="300">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "望远镜信息"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="700">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "步进移动(mm):"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="606">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "状态:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="767">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "移动"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="782">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "移动速度(mm/s)："。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="384">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "西"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="354">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "西北"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="344">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "西南"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="675">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "调焦器"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="472">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "赤纬:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="654">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "赤纬:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="448">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "赤经:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="630">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "赤经:"。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.ToolStripItem.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="195">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "OT服务器..."。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="189">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "参数(&amp;P)"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="166">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "断开OT服务器"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="144">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "断开望远镜"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="129">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "系统(&amp;S)"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="157">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "连接OT服务器"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="135">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "连接望远镜"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="179">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "退出"。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.ToolStripItem.set_ToolTipText(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="158">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.ToolTipText.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "建立与服务器的网络连接"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="136">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.ToolTipText.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "建立与望远镜的连接"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="167">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.ToolTipText.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "断开与服务器的网络连接"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="145">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.ToolTipText.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "断开与望远镜的连接"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.Designer.cs" Line="180">方法 'frmMain.InitializeComponent()' 将一个文本字符串作为对 'ToolStripItem.ToolTipText.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "释放资源并退出程序"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#m_bFocusConnect" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'frmMain.m_bFocusConnect' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#m_serverIP" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'frmMain.m_serverIP' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#m_serverPort" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'frmMain.m_serverPort' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#order_slew_bytes2struct(System.Byte[],System.Type)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">'frmMain.order_slew_bytes2struct(byte[], Type)' 调入具有 LinkDemand 的 'Marshal.AllocHGlobal(int)'。通过此调用，'Marshal.AllocHGlobal(int)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'&#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">'frmMain.order_slew_bytes2struct(byte[], Type)' 调入具有 LinkDemand 的 'Marshal.Copy(byte[], int, IntPtr, int)'。通过此调用，'Marshal.Copy(byte[], int, IntPtr, int)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'&#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">'frmMain.order_slew_bytes2struct(byte[], Type)' 调入具有 LinkDemand 的 'Marshal.FreeHGlobal(IntPtr)'。通过此调用，'Marshal.FreeHGlobal(IntPtr)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'&#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">'frmMain.order_slew_bytes2struct(byte[], Type)' 调入具有 LinkDemand 的 'Marshal.PtrToStructure(IntPtr, Type)'。通过此调用，'Marshal.PtrToStructure(IntPtr, Type)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'&#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'</Issue>
+             <Issue Certainty="33" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">'frmMain.order_slew_bytes2struct(byte[], Type)' 调入具有 LinkDemand 的 'Marshal.SizeOf(Type)'。通过此调用，'Marshal.SizeOf(Type)' 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: &#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'&#xD;&#xA;   -&gt;'frmMain.order_slew_bytes2struct(byte[], Type)'</Issue>
+            </Message>
+            <Message Id="bytes" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">更正成员名称 'frmMain.order_slew_bytes2struct(byte[], Type)' 中“bytes”的大小写，将其改为“Bytes”。</Issue>
+            </Message>
+            <Message Id="order" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">更正成员名称 'frmMain.order_slew_bytes2struct(byte[], Type)' 中“order”的大小写，将其改为“Order”。</Issue>
+            </Message>
+            <Message Id="slew" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">更正成员名称 'frmMain.order_slew_bytes2struct(byte[], Type)' 中“slew”的大小写，将其改为“Slew”。</Issue>
+            </Message>
+            <Message Id="struct" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">更正成员名称 'frmMain.order_slew_bytes2struct(byte[], Type)' 中“struct”的大小写，将其改为“Struct”。</Issue>
+            </Message>
+            <Message Id="bytes" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">在成员 'frmMain.order_slew_bytes2struct(byte[], Type)' 中，考虑将参数名称 'bytes' 中的数据类型标识符“bytes”替换为一个更通用的词条，如“value”。</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">从成员名称 'frmMain.order_slew_bytes2struct(byte[], Type)' 中移除下划线。</Issue>
+            </Message>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="144">从未使用 'frmMain.order_slew_bytes2struct(byte[], Type)' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="146">在外部可见方法 'frmMain.order_slew_bytes2struct(byte[], Type)' 中，请在使用参数“bytes”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#submenuExit_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToString(System.Int32)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="190">由于 'Convert.ToString(int)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.submenuExit_Click(object, EventArgs)' 中的此调用替换为对 'Convert.ToString(int, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(int, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#submenuParamNet_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="596">在方法 'frmMain.submenuParamNet_Click(object, EventArgs)' 中，请在对 'frame' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#submenuTelescopeConnect_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="306">更改 'frmMain.submenuTelescopeConnect_Click(object, EventArgs)' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="313">更改 'frmMain.submenuTelescopeConnect_Click(object, EventArgs)' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="306">方法 'frmMain.submenuTelescopeConnect_Click(object, EventArgs)' 将一个文本字符串作为对 'MessageBox.Show(string)' 的调用的参数“text”传递。改为从资源表检索以下字符串: "连接望远镜失败!\r\n"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="313">方法 'frmMain.submenuTelescopeConnect_Click(object, EventArgs)' 将一个文本字符串作为对 'MessageBox.Show(string)' 的调用的参数“text”传递。改为从资源表检索以下字符串: "连接调焦器失败!\r\n"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tmrNetwork_Tick(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="numRead" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="608">'frmMain.tmrNetwork_Tick(object, EventArgs)' 声明类型为 'int' 的变量 'numRead'，但从未使用过该变量或只对它进行过赋值。请使用此变量或将它移除。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Double)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="610">由于 'Convert.ToString(double)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrNetwork_Tick(object, EventArgs)' 中的此调用替换为对 'Convert.ToString(double, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(double, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="611">由于 'Convert.ToString(double)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrNetwork_Tick(object, EventArgs)' 中的此调用替换为对 'Convert.ToString(double, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(double, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="612">方法 'frmMain.tmrNetwork_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "Real"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="663">方法 'frmMain.tmrNetwork_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "指向..."。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#tmrRefresh_Tick(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="375">由于 'string.Format(string, object, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrRefresh_Tick(object, EventArgs)' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="378">由于 'string.Format(string, object, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrRefresh_Tick(object, EventArgs)' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="388">由于 'string.Format(string, object, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrRefresh_Tick(object, EventArgs)' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="390">由于 'string.Format(string, object, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrRefresh_Tick(object, EventArgs)' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="392">由于 'string.Format(string, object, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrRefresh_Tick(object, EventArgs)' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="394">由于 'string.Format(string, object, object, object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrRefresh_Tick(object, EventArgs)' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="376">由于 'string.Format(string, params object[])' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmMain.tmrRefresh_Tick(object, EventArgs)' 中的此调用替换为对 'string.Format(IFormatProvider, string, params object[])' 的调用。如果要向用户显示 'string.Format(IFormatProvider, string, params object[])' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="375">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "-"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="378">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: ":"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="388">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: ":"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="390">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: ":"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="392">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: ":"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="394">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: ":"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="376">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: ":, ."。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="430">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "复位"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="444">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "复位"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="425">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "找到零点"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="437">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "找到零点"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="404">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "指向..."。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="419">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "跟踪中"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmMain.cs" Line="461">方法 'frmMain.tmrRefresh_Tick(object, EventArgs)' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "跟踪中"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="frmParamNet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="frm" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'frmParamNet' 中“frm”的大小写，将其改为“Frm”。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor(DDMAgent.frmMain)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToString(System.Int32)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmParamNet.cs" Line="24">由于 'Convert.ToString(int)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmParamNet.frmParamNet(frmMain)' 中的此调用替换为对 'Convert.ToString(int, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(int, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#btnOK_Click(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmParamNet.cs" Line="30">由于 'Convert.ToInt32(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'frmParamNet.btnOK_Click(object, EventArgs)' 中的此调用替换为对 'Convert.ToInt32(string, IFormatProvider)' 的调用。如果 'Convert.ToInt32(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitializeComponent()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Windows.Forms.Control.set_Text(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmParamNet.Designer.cs" Line="45">方法 'frmParamNet.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "IP地址:"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmParamNet.Designer.cs" Line="115">方法 'frmParamNet.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "OT服务器网络参数..."。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmParamNet.Designer.cs" Line="95">方法 'frmParamNet.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "关  闭"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmParamNet.Designer.cs" Line="83">方法 'frmParamNet.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "确  定"。</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="frmParamNet.Designer.cs" Line="54">方法 'frmParamNet.InitializeComponent()' 将一个文本字符串作为对 'Control.Text.set(string)' 的调用的参数“value”传递。改为从资源表检索以下字符串: "端  口:"。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="NetBus" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+           <Issue Certainty="75" Level="Warning">'NetBus' 是显然没有实例化过的内部类。如果是这样，请从程序集内移除该代码。如果此内部类只用于包含静态方法，请考虑添加私有构造函数，以阻止编译器生成默认构造函数。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Connect()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="NetBus.cs" Line="69">从未使用 'NetBus.Connect()' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DisConnect()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="NetBus.cs" Line="75">从未使用 'NetBus.DisConnect()' 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#m_ipRemote" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'NetBus.m_ipRemote' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#m_portRemote" Kind="Field" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning">似乎从未使用过字段 'NetBus.m_portRemote' 或只对它进行过赋值。请使用此字段或将它移除。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="order_telescope_slew" Kind="Struct" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="order" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'order_telescope_slew' 中“order”的大小写，将其改为“Order”。</Issue>
+          </Message>
+          <Message Id="slew" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'order_telescope_slew' 中“slew”的大小写，将其改为“Slew”。</Issue>
+          </Message>
+          <Message Id="telescope" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'order_telescope_slew' 中“telescope”的大小写，将其改为“Telescope”。</Issue>
+          </Message>
+          <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="95" Level="Error">从类型名称 'order_telescope_slew' 中移除下划线。</Issue>
+          </Message>
+          <Message TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+           <Issue Name="Equals" Certainty="75" Level="Warning">'order_telescope_slew' 应重写 Equals。</Issue>
+           <Issue Name="op_Equality" Certainty="75" Level="Warning">'order_telescope_slew' 应重写相等(==)和不等(!=)运算符。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#alpha" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'order_telescope_slew.alpha' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#delta" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'order_telescope_slew.delta' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wCoorSys" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'order_telescope_slew.wCoorSys' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wSize" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'order_telescope_slew.wSize' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#wType" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">由于字段 'order_telescope_slew.wType' 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="XMLConfig">
+       <Types>
+        <Type Name="ManageConfig" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Finalize()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\工作项目\60cm望远镜\DDMAgent" File="ManageConfig.cs" Line="59">修改 'ManageConfig.~ManageConfig()' 以便捕捉比 'object' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="ManageConfig.cs" Line="61">更改 'ManageConfig.~ManageConfig()' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+            </Message>
+            <Message Id="System.Windows.Forms.MessageBox.Show(System.String)" TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\工作项目\60cm望远镜\DDMAgent" File="ManageConfig.cs" Line="61">方法 'ManageConfig.~ManageConfig()' 将一个文本字符串作为对 'MessageBox.Show(string)' 的调用的参数“text”传递。改为从资源表检索以下字符串: "Failed to Save XML file."。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsSectionExist(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300" Status="Active" Created="2014-11-19 07:13:25Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\工作项目\60cm望远镜\DDMAgent" File="ManageConfig.cs" Line="193">更改 'ManageConfig.IsSectionExist(string)' 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>程序集应具有有效的强名称</Name>
+   <Description>程序集没有强名称，强名称无效，或者强名称只有经过计算机配置后才有效。不应部署处于这种状态的程序集。出现这种情况最常见原因有: 1) 对程序集进行签名后，修改了该程序集的内容；2) 签名过程失败；3) 延迟了程序集签名；4) 存在一个允许检查通过(原本不应通过)的注册表项。</Description>
+   <Resolution Name="NoStrongName">用强名称密钥对 {0} 进行签名。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>避免使用未调用的私有代码</Name>
+   <Description>存在对外部不可见的未调用代码，该代码不是已知的运行时入口点。如果错误地引发此冲突，请向 Visual Studio 代码分析团队发送问题报告。</Description>
+   <Resolution Name="Default">{0} 似乎没有上游 public 或 protected 调用方。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182264(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUninstantiatedInternalClasses" Category="Microsoft.Performance" CheckId="CA1812">
+   <Name>避免未实例化的内部类</Name>
+   <Description>检测到显然从未实例化过的内部类。此规则不会尝试检测后期绑定创建，并且，如果某一类型的实例都是以这种方法(例如，通过 Activator.CreateInstance 或将类型作为参数传递给 TypeConverter 构造函数)创建的，则将产生误报。</Description>
+   <Resolution Name="Default">{0} 是显然没有实例化过的内部类。如果是这样，请从程序集内移除该代码。如果此内部类只用于包含静态方法，请考虑添加私有构造函数，以阻止编译器生成默认构造函数。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182265(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnusedPrivateFields" Category="Microsoft.Performance" CheckId="CA1823">
+   <Name>避免未使用的私有字段</Name>
+   <Description>检测到程序集内有似乎未访问过的私有字段。如果错误地引发了此冲突，请向 Visual Studio 代码分析团队发送问题报告。</Description>
+   <Resolution Name="Default">似乎从未使用过字段 {0} 或只对它进行过赋值。请使用此字段或将它移除。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245042(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DisposableFieldsShouldBeDisposed" Category="Microsoft.Usage" CheckId="CA2213">
+   <Name>应释放可释放的字段</Name>
+   <Description>如果实现了 IDisposable 的类型拥有同样实现 IDisposable 的字段，则封装类型的 Dispose() 实现应对每个可释放字段调用 Dispose()。</Description>
+   <Resolution Name="Default">{0} 包含 IDisposable 类型的字段 {1}: {2}。请更改 {0} 的 Dispose 方法，使其针对该字段调用 Dispose 或 Close。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182328(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>不要捕捉一般异常类型</Name>
+   <Description>不应捕捉 Exception 或 SystemException。捕捉一般异常类型会使库用户看不到运行时问题，并会使调试复杂化。您应该仅捕捉自己可以进行适当处理的异常。</Description>
+   <Resolution Name="Default">修改 {0} 以便捕捉比 {1} 更具体的异常，或者再次引发该异常。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>不要声明可见实例字段</Name>
+   <Description>在其声明类型的外部可见的实例字段会限制您更改这些数据项的实现详细信息的能力。请改用属性。属性不会降低可用性或性能，并且能够提供灵活性，因为它们隐藏了基础数据的实现详细信息。</Description>
+   <Resolution Name="Default">由于字段 {0} 在其声明类型的外部可见，因此，请将它的可访问性改为私有，并添加一个与该字段当前的可访问性相同的属性以提供对该属性的访问。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182141(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIndirectlyExposeMethodsWithLinkDemands" Category="Microsoft.Security" CheckId="CA2122">
+   <Name>不要使用链接请求间接公开方法</Name>
+   <Description>不要使用不执行安全性检查的方法来包装受 LinkDemand 保护的方法。LinkDemand 检查直接调用方的权限而不是调用堆栈中所有调用方的权限。在这种情况下，将检查包装方法的权限。如果包装方法本身不检查调用堆栈中位置较高的调用方的权限，则尽管恶意代码没有足够的权限，但它仍可能能够执行被包装的函数。</Description>
+   <Resolution Name="Default">{0} 调入具有 LinkDemand 的 {1}。通过此调用，{1} 被间接公开给用户代码。检查以下可能公开避开安全保护的方法的调用堆栈: {2}</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182303(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="33">CriticalError</MessageLevel>
+   <File Name="securityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotUseTimersThatPreventPowerStateChanges" Category="Microsoft.Mobility" CheckId="CA1601">
+   <Name>不要使用阻止电源状态更改的计时器</Name>
+   <Description>不要以高于每秒一次的频率轮询或使用触发频率高于每秒一次的计时器。频率较高的定期活动会使 CPU 处于繁忙状态并且干扰具有节能功能(关闭显示器和硬盘)的空闲计时器。</Description>
+   <Resolution Name="Default">修改方法 {1} 中对 {0} 的调用以将计时器间隔设置为大于或等于 1 秒的值。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182230(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="mobilityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>标识符的大小写应当正确</Name>
+   <Description>类型、命名空间和成员标识符应采用 Pascal 大小写格式。参数标识符应采用 Camel 大小写格式。这些标识符内由两个字母组成的首字母缩略词应全部大写，例如，应采用 System.IO，而不是 System.Io。由三个或更多个字母组成的首字母缩略词应采用 Pascal 大小写格式，例如，应采用 System.Xml，而不是 System.XML。Pascal 大小写格式约定每个单词的首字母大写，如 BackColor。Camel 大小写格式约定第一个单词的首字母小写，所有后续单词的首字母都大写，如 backgroundColor。尽管有些由两个字母组成的首字母缩略词习惯采用不完全大写形式，但不能因此而排斥此规则。例如，“DbConnection”很常见，但并不正确，应采用 DBConnection。为了与现有的非托管符号方案兼容，可能需要违反此规则。但一般来说，这些符号在使用它们的程序集之外不可见。</Description>
+   <Resolution Name="Assembly">更正程序集名称 {1} 中“{0}”的大小写，将其改为“{2}”。</Resolution>
+   <Resolution Name="Member">更正成员名称 {1} 中“{0}”的大小写，将其改为“{2}”。</Resolution>
+   <Resolution Name="Namespace">更正命名空间名称“{1}”中“{0}”的大小写，将其改为“{2}”。</Resolution>
+   <Resolution Name="Type">更正类型名称 {1} 中“{0}”的大小写，将其改为“{2}”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+   <Name>标识符不应包含类型名称</Name>
+   <Description>应避免在参数和成员中使用特定于某一种语言的类型名称，避免在参数中使用数据类型标识符。类型名对于所有开发人员来说可能不够直观。建议选用通用名称，如“value”。如果不足以区分，应确保采用 .NET Framework 库中定义的类型名，并完全避免采用特定于某一种语言的类型名称。例如，特定于 C# 的类型名有“float”(如果通用名称不足以区分，则使用“Single”)和“ulong”(如果通用名称不足以区分，则使用“UInt64”)等等。</Description>
+   <Resolution Name="LanguageIndependentMemberParameter">在成员 {0} 中，考虑将参数名称 {2} 中的数据类型标识符“{1}”替换为一个更通用的词条，如“value”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb531486(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+   <Name>标识符不应包含下划线</Name>
+   <Description>指定标识符时不要使用下划线。系统为应用程序生成的某些 Visual Studio 标识符会包含下划线字符。通常情况下应避免在公共标识符中使用下划线字符。</Description>
+   <Resolution Name="Member">从成员名称 {0} 中移除下划线。</Resolution>
+   <Resolution Name="Type">从类型名称 {0} 中移除下划线。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182245(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>用 CLSCompliantAttribute 标记程序集</Name>
+   <Description>程序集应使用 CLSCompliant 特性显式说明其 ClS 遵从性。没有此特性的程序集不符合 CLS。即使程序集、模块或类型的某些部分不符合 CLS，这些程序集、模块或类型本身也可以是符合 CLS 的。适用下列规则: 1) 如果元素标记为 CLSCompliant，则所有不符合 CLS 的成员都必须有参数设置为 false 的 CLSCompliant 特性。2) 对于每个不符合 CLS 的成员，都必须提供一个相应的符合 CLS 的备选成员。</Description>
+   <Resolution Name="Default">使用 CLSCompliant(true)来标记 {0}，因为它公开外部可见的类型。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+   <Name>用 NeutralResourcesLanguageAttribute 标记程序集</Name>
+   <Description>NeutralResourcesLanguage 特性将用来呈现非特定区域性的程序集资源的语言通知给 ResourceManager。在查找与非特定区域性语言具有相同区域性的资源时，ResourceManager 会自动使用位于主程序集内的资源，而不是搜索具有当前线程的当前用户界面区域性的附属程序集。这会改进所加载的第一个资源的查找性能，并缩小工作集。</Description>
+   <Resolution Name="Default">由于程序集 {0} 包含基于 ResX 的资源文件，因此请使用 NeutralResourcesLanguage 特性来标记它，并指定该程序集内的资源所采用的语言。这会改进首次检索资源时的查找性能。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385967(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>将成员标记为 static</Name>
+   <Description>不访问实例数据或调用实例方法的方法可标记为 Static (在 Visual Basic 中为 Shared)。这样，编译器会向这些成员发出非虚拟调用站点，以防止在运行时对每个调用进行旨在确保当前对象指针为非 null 的检查。这样可以使对性能比较敏感的代码获得显著的性能提升。在某些情况下，无法访问当前对象实例表明存在正确性问题。</Description>
+   <Resolution Name="Default">从未使用 {0} 的“this”参数(Visual Basic 中为“Me”)。根据需要，将成员标记为 static (Visual Basic 中为“Shared”)，或者在方法体或至少一个属性访问器中使用“this”/“Me”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="OverrideEqualsAndOperatorEqualsOnValueTypes" Category="Microsoft.Performance" CheckId="CA1815">
+   <Name>重写值类型上的 Equals 和相等运算符</Name>
+   <Description>与自定义实现相比，默认 System.ValueType 实现的性能可能要差一些。</Description>
+   <Resolution Name="Equals">{0} 应重写 Equals。</Resolution>
+   <Resolution Name="op_Equality">{0} 应重写相等(==)和不等(!=)运算符。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182276(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="PreferJaggedArraysOverMultidimensional" Category="Microsoft.Performance" CheckId="CA1814">
+   <Name>与多维数组相比，首选使用交错的数组</Name>
+   <Description>多维数组可能对性能有负面影响。如有可能，请使用交错数组。</Description>
+   <Resolution Name="Default">{0} 是多维数组。如有可能，请使用交错数组来替代它。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182277(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="25">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>移除未使用的局部变量</Name>
+   <Description>移除方法实现中未使用过的或只赋过值的局部变量。</Description>
+   <Resolution Name="Default">{0} 声明类型为 {2} 的变量 {1}，但从未使用过该变量或只对它进行过赋值。请使用此变量或将它移除。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>指定 IFormatProvider</Name>
+   <Description>如果存在一个采用 IFormatProvider 参数的重载，则应始终调用该重载，而不调用未采用该参数的重载。运行时中的某些方法可以将值与字符串表示形式相互进行转换，并采用一个字符串参数。该参数中包含一个或多个称为格式说明符的字符，用于指示如何对值进行转换。如果格式说明符的含义因区域性而异，则格式设置对象提供在字符串表示形式中使用的实际字符。如果排序和比较行为不得因区域性而改变，请指定 CultureInfo.InvariantCulture，否则，请指定 CultureInfo.CurrentCulture。</Description>
+   <Resolution Name="IFormatProviderAlternate">由于 {0} 的行为可能会因当前用户的区域设置不同而不同，请将 {1} 中的此调用替换为对 {2} 的调用。如果 {2} 的结果将基于用户的输入，请指定 {3} 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 {4}。</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">由于 {0} 的行为可能会因当前用户的区域设置不同而不同，请将 {1} 中的此调用替换为对 {2} 的调用。如果要向用户显示 {2} 的结果，请指定 {3} 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 {4}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyMessageBoxOptions" Category="Microsoft.Globalization" CheckId="CA1300">
+   <Name>指定 MessageBoxOptions</Name>
+   <Description>为在从右向左的系统上正确运行，对 MessageBox.Show 的所有调用都应使用指定 MessageBoxOptions 作为参数的重载。程序在运行时应检测其是否在从右向左的系统上运行，并传递相应的 MessageBoxOptions 值以便正确显示。</Description>
+   <Resolution Name="Default">更改 {0} 以调用指定 MessageBoxOptions 的 MessageBox.Show 重载，并确保当父控件的 RightToLeft 设置为 RightToLeft.Yes 时，设置 MessageBoxOptions.RightAlign 和 MessageBoxOptions.RtlReading。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182191(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+   <Name>使用字符串长度测试是否有空字符串</Name>
+   <Description>若要测试是否有空字符串，请检查 String.Length 是否等于零。对于如 "".Equals(someString) 和 String.Empty.Equals(someString) 之类的构造，其效率低于字符串长度测试。请使用 someString.Length == 0 检查来替换它们。</Description>
+   <Resolution Name="IsNullOrEmpty">使用“String.IsNullOrEmpty”调用来替换 {1} 中的 {0} 调用。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182279(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>丢失范围之前释放对象</Name>
+   <Description>如果在对某个可释放对象的所有引用超出范围之前未显式释放该对象，则当垃圾回收器运行该对象的终结器时，会在某个不确定时间释放该对象。由于可能会发生阻止该对象的终结器运行的意外事件，因此应改为显式释放该对象。</Description>
+   <Resolution Name="NonExceptionEdge">在方法 {0} 中，请在对 {1} 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="请不要将文本作为本地化参数传递" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>请不要将文本作为本地化参数传递</Name>
+   <Description>嵌入源代码的文本字符串难以进行本地化。对于通常应使用本地化的文本字符串的情况，要避免将文本字符串作为参数来传递。</Description>
+   <Resolution Name="KnownValue">方法 {0} 将一个文本字符串作为对 {2} 的调用的参数“{1}”传递。改为从资源表检索以下字符串: {3}。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>验证公共方法的参数</Name>
+   <Description>应检查传递给外部可见方法的所有引用参数是否为 Null (在 VB 中为 Nothing)。如果适用，在参数为 null 时，引发 System.ArgumentNullException。</Description>
+   <Resolution Name="Default">在外部可见方法 {0} 中，请在使用参数“{1}”之前先对其进行验证。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+</FxCopReport>

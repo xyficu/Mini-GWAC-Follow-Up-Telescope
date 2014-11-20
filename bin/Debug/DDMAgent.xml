@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Configuration>
+  <Server>
+    <Add Keyword="IP" Value="127.0.0.1" />
+    <Add Keyword="Port" Value="6004" />
+  </Server>
+  <Instrument>
+    <Add Keyword="Telescope Prog ID" Value="AstrooptikServer.Telescope" />
+    <Add Keyword="Focuser Prog ID" Value="ACCServer.Focuser" />
+    <Add Keyword="Focuser ProgID" Value="ACCServer.Focuser" />
+  </Instrument>
+</Configuration>

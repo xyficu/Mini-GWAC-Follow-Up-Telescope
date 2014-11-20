@@ -1,0 +1,8 @@
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\DDMAgent.frmMain.resources
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\DDMAgent.frmParamNet.resources
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\DDMAgent.Properties.Resources.resources
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\MGFT.csproj.GenerateResource.Cache
+D:\工作项目\60cm望远镜\DDMAgent\bin\Debug\Mini-GWAC Follow Up Telescope.exe
+D:\工作项目\60cm望远镜\DDMAgent\bin\Debug\Mini-GWAC Follow Up Telescope.pdb
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\Mini-GWAC Follow Up Telescope.exe
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\Mini-GWAC Follow Up Telescope.pdb

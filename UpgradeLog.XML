@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DDMAgent">
+</Property><Property Name="解决方案文件" Value="D:\Xinglong\AssistTelescope\Source\DDMAgent\DDMAgent.sln">
+</Property><Property Name="用户选项文件" Value="D:\Xinglong\AssistTelescope\Source\DDMAgent\DDMAgent.suo">
+</Property><Property Name="Date" Value="2012年2月24日">
+</Property><Property Name="Time" Value="21:07">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DDMAgent.sln" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\DDMAgent.sln">
+</Event><Event ErrorLevel="0" Project="" Source="DDMAgent.suo" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\DDMAgent.suo">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="DDMAgent.csproj" Description="项目文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\DDMAgent.csproj">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="DDMAgent.csproj.user" Description="项目用户文件成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\DDMAgent.csproj.user">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="AstroArith.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\AstroArith.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="frmMain.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\frmMain.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="frmMain.Designer.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\frmMain.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="frmParamNet.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\frmParamNet.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="frmParamNet.Designer.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\frmParamNet.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="ManageConfig.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\ManageConfig.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="NetBus.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\NetBus.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="Program.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\Program.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="Properties\AssemblyInfo.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="Properties\Resources.Designer.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="Properties\Settings.Designer.cs" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="Properties\Settings.settings" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="73.ico" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\73.ico">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="frmMain.resx" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\frmMain.resx">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="frmParamNet.resx" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\frmParamNet.resx">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="Properties\Resources.resx" Description="文件已成功备份为 D:\Xinglong\AssistTelescope\Source\DDMAgent\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="DDMAgent.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DDMAgent" Source="DDMAgent.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DDMAgent.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="DDMAgent.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DDMAgent" Source="DDMAgent.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

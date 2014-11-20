@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Configuration>
+  <Server>
+    <Add Keyword="IP" Value="192.168.161.3" />
+    <Add Keyword="Port" Value="6004" />
+  </Server>
+  <Instrument>
+    <Add Keyword="Telescope Prog ID" Value="AstrooptikServer.Telescope" />
+  </Instrument>
+</Configuration>
