@@ -6,3 +6,9 @@ D:\工作项目\60cm望远镜\DDMAgent\bin\Debug\Mini-GWAC Follow Up Telescope.e
 D:\工作项目\60cm望远镜\DDMAgent\bin\Debug\Mini-GWAC Follow Up Telescope.pdb
 D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\Mini-GWAC Follow Up Telescope.exe
 D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\Mini-GWAC Follow Up Telescope.pdb
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\DDMAgent.frmOTList.resources
+D:\工作项目\60cm望远镜\DDMAgent\bin\Debug\Mini-GWAC Follow Up Telescope.exe.manifest
+D:\工作项目\60cm望远镜\DDMAgent\bin\Debug\Mini-GWAC Follow Up Telescope.application
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\Mini-GWAC Follow Up Telescope.exe.manifest
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\Mini-GWAC Follow Up Telescope.application
+D:\工作项目\60cm望远镜\DDMAgent\obj\Debug\MGFT.csprojResolveAssemblyReference.cache

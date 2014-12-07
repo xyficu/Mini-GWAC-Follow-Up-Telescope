@@ -698,22 +698,22 @@ namespace DDMAgent
                     progressBarFocus.Value = (int)(IFocus.Position / 30000.0 * 100);
 
                     //刷新转台信息
-                    textBoxTeleInfo.Text = "AlignmentMode: " + IScope.AlignmentMode.ToString();
-                    textBoxTeleInfo.Text += "Altitude: " + IScope.Altitude.ToString();
-                    textBoxTeleInfo.Text += "ApertureArea" + IScope.ApertureArea.ToString();
-                    textBoxTeleInfo.Text += "ApertureDiameter" + IScope.ApertureDiameter.ToString();
-                    textBoxTeleInfo.Text += "AtHome" + IScope.AtHome.ToString();
-                    textBoxTeleInfo.Text += "AtPark" + IScope.AtPark.ToString();
-                    textBoxTeleInfo.Text += "Azimuth" + IScope.Azimuth.ToString();
-                    textBoxTeleInfo.Text += "CanFindHome" + IScope.CanFindHome.ToString();
-                    textBoxTeleInfo.Text += "CanPark" + IScope.CanPark.ToString();
-                    textBoxTeleInfo.Text += "CanPulseGuide" + IScope.CanPulseGuide.ToString();
-                    textBoxTeleInfo.Text += "CanSetDeclinationRate" + IScope.CanSetDeclinationRate.ToString();
-                    textBoxTeleInfo.Text += "CanSetGuideRates" + IScope.CanSetGuideRates.ToString();
-                    textBoxTeleInfo.Text += "CanSetPark" + IScope.CanSetPark.ToString();
-                    textBoxTeleInfo.Text += "CanSetPierSide" + IScope.CanSetPierSide.ToString();
-                    textBoxTeleInfo.Text += "CanSetRightAscensionRate" + IScope.CanSetRightAscensionRate.ToString();
-                    //textBoxTeleInfo.Text+=""+IScope.
+                    //textBoxTeleInfo.Text = "AlignmentMode: " + IScope.AlignmentMode.ToString();
+                    //textBoxTeleInfo.Text += "Altitude: " + IScope.Altitude.ToString();
+                    //textBoxTeleInfo.Text += "ApertureArea" + IScope.ApertureArea.ToString();
+                    //textBoxTeleInfo.Text += "ApertureDiameter" + IScope.ApertureDiameter.ToString();
+                    //textBoxTeleInfo.Text += "AtHome" + IScope.AtHome.ToString();
+                    //textBoxTeleInfo.Text += "AtPark" + IScope.AtPark.ToString();
+                    //textBoxTeleInfo.Text += "Azimuth" + IScope.Azimuth.ToString();
+                    //textBoxTeleInfo.Text += "CanFindHome" + IScope.CanFindHome.ToString();
+                    //textBoxTeleInfo.Text += "CanPark" + IScope.CanPark.ToString();
+                    //textBoxTeleInfo.Text += "CanPulseGuide" + IScope.CanPulseGuide.ToString();
+                    //textBoxTeleInfo.Text += "CanSetDeclinationRate" + IScope.CanSetDeclinationRate.ToString();
+                    //textBoxTeleInfo.Text += "CanSetGuideRates" + IScope.CanSetGuideRates.ToString();
+                    //textBoxTeleInfo.Text += "CanSetPark" + IScope.CanSetPark.ToString();
+                    //textBoxTeleInfo.Text += "CanSetPierSide" + IScope.CanSetPierSide.ToString();
+                    //textBoxTeleInfo.Text += "CanSetRightAscensionRate" + IScope.CanSetRightAscensionRate.ToString();
+                    //textBoxTeleInfo.Text = IScope.UTCDate.ToUniversalTime().ToString();
    
                 }
                 
@@ -803,7 +803,25 @@ namespace DDMAgent
         private void buttonTeleSlewN_Click(object sender, EventArgs e)
         {
             //textBoxTeleInfo.Text = IScope.AlignmentMode.ToString();
-            textBoxTeleInfo.Text = IScope.AtPark.ToString();
+            try
+            {
+                if (IScope != null && IScope.Connected == true)
+                {
+                    textBoxTeleInfo.Text = IScope.AtPark.ToString();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                m_strError = ex.Message;
+            }
+
+        }
+
+        private void submenuOTList_Click(object sender, EventArgs e)
+        {
+            frmOTList otList = new frmOTList(this);
+            otList.StartPosition = FormStartPosition.CenterParent;
+            otList.Show();
         }
 	}
 }

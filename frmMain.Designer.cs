@@ -39,8 +39,9 @@
             this.submenuServerDisconnect = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.submenuExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuParameter = new System.Windows.Forms.ToolStripMenuItem();
-            this.submenuParamNet = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFunction = new System.Windows.Forms.ToolStripMenuItem();
+            this.submenuParamNetOT = new System.Windows.Forms.ToolStripMenuItem();
+            this.submenuOTList = new System.Windows.Forms.ToolStripMenuItem();
             this.服务AToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrRefresh = new System.Windows.Forms.Timer(this.components);
             this.lblUT = new System.Windows.Forms.Label();
@@ -95,13 +96,13 @@
             this.progressBarFocus = new System.Windows.Forms.ProgressBar();
             this.buttonFocusStopMove = new System.Windows.Forms.Button();
             this.buttonFocusStartMove = new System.Windows.Forms.Button();
+            this.textBoxFocusPos = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.textBoxFocusStep = new System.Windows.Forms.TextBox();
             this.buttonFocusStepMoveInc = new System.Windows.Forms.Button();
             this.buttonFocusStepMoveDec = new System.Windows.Forms.Button();
             this.labelFocusCurPos = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBoxFocusPos = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -115,7 +116,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuSystem,
-            this.menuParameter,
+            this.menuFunction,
             this.服务AToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -189,20 +190,28 @@
             this.submenuExit.ToolTipText = "释放资源并退出程序";
             this.submenuExit.Click += new System.EventHandler(this.submenuExit_Click);
             // 
-            // menuParameter
+            // menuFunction
             // 
-            this.menuParameter.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.submenuParamNet});
-            this.menuParameter.Name = "menuParameter";
-            this.menuParameter.Size = new System.Drawing.Size(59, 21);
-            this.menuParameter.Text = "参数(&P)";
+            this.menuFunction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submenuParamNetOT,
+            this.submenuOTList});
+            this.menuFunction.Name = "menuFunction";
+            this.menuFunction.Size = new System.Drawing.Size(58, 21);
+            this.menuFunction.Text = "功能(&F)";
             // 
-            // submenuParamNet
+            // submenuParamNetOT
             // 
-            this.submenuParamNet.Name = "submenuParamNet";
-            this.submenuParamNet.Size = new System.Drawing.Size(152, 22);
-            this.submenuParamNet.Text = "OT服务器...";
-            this.submenuParamNet.Click += new System.EventHandler(this.submenuParamNet_Click);
+            this.submenuParamNetOT.Name = "submenuParamNetOT";
+            this.submenuParamNetOT.Size = new System.Drawing.Size(152, 22);
+            this.submenuParamNetOT.Text = "OT服务器...";
+            this.submenuParamNetOT.Click += new System.EventHandler(this.submenuParamNet_Click);
+            // 
+            // submenuOTList
+            // 
+            this.submenuOTList.Name = "submenuOTList";
+            this.submenuOTList.Size = new System.Drawing.Size(152, 22);
+            this.submenuOTList.Text = "OT列表";
+            this.submenuOTList.Click += new System.EventHandler(this.submenuOTList_Click);
             // 
             // 服务AToolStripMenuItem
             // 
@@ -307,9 +316,9 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.groupBox1.Location = new System.Drawing.Point(10, 30);
+            this.groupBox1.Location = new System.Drawing.Point(10, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(510, 374);
+            this.groupBox1.Size = new System.Drawing.Size(510, 376);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "赤道仪";
@@ -848,6 +857,14 @@
             this.buttonFocusStartMove.UseVisualStyleBackColor = false;
             this.buttonFocusStartMove.Click += new System.EventHandler(this.buttonFocusStartMove_Click);
             // 
+            // textBoxFocusPos
+            // 
+            this.textBoxFocusPos.Location = new System.Drawing.Point(7, 39);
+            this.textBoxFocusPos.Name = "textBoxFocusPos";
+            this.textBoxFocusPos.Size = new System.Drawing.Size(75, 23);
+            this.textBoxFocusPos.TabIndex = 0;
+            this.textBoxFocusPos.Text = "0";
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.textBoxFocusStep);
@@ -917,14 +934,6 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "位置(mm)：";
             // 
-            // textBoxFocusPos
-            // 
-            this.textBoxFocusPos.Location = new System.Drawing.Point(7, 39);
-            this.textBoxFocusPos.Name = "textBoxFocusPos";
-            this.textBoxFocusPos.Size = new System.Drawing.Size(75, 23);
-            this.textBoxFocusPos.TabIndex = 0;
-            this.textBoxFocusPos.Text = "0";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -969,7 +978,7 @@
         private System.Windows.Forms.ToolStripMenuItem submenuServerDisconnect;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem submenuExit;
-		private System.Windows.Forms.ToolStripMenuItem menuParameter;
+		private System.Windows.Forms.ToolStripMenuItem menuFunction;
         private System.Windows.Forms.Timer tmrRefresh;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label lblDate;
@@ -990,7 +999,7 @@
 		private System.Windows.Forms.Button btnFindHome;
 		private System.Windows.Forms.Label lblState;
 		private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ToolStripMenuItem submenuParamNet;
+        private System.Windows.Forms.ToolStripMenuItem submenuParamNetOT;
         private System.Windows.Forms.Timer tmrNetwork;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
@@ -1032,5 +1041,6 @@
         private System.Windows.Forms.Label labelFocusCurPos;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBoxFocusPos;
+        private System.Windows.Forms.ToolStripMenuItem submenuOTList;
     }
 }
