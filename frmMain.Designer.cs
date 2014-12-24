@@ -103,6 +103,7 @@
             this.buttonFocusStepMoveDec = new System.Windows.Forms.Button();
             this.labelFocusCurPos = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.timerLog = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -202,14 +203,14 @@
             // submenuParamNetOT
             // 
             this.submenuParamNetOT.Name = "submenuParamNetOT";
-            this.submenuParamNetOT.Size = new System.Drawing.Size(152, 22);
+            this.submenuParamNetOT.Size = new System.Drawing.Size(138, 22);
             this.submenuParamNetOT.Text = "OT服务器...";
             this.submenuParamNetOT.Click += new System.EventHandler(this.submenuParamNet_Click);
             // 
             // submenuOTList
             // 
             this.submenuOTList.Name = "submenuOTList";
-            this.submenuOTList.Size = new System.Drawing.Size(152, 22);
+            this.submenuOTList.Size = new System.Drawing.Size(138, 22);
             this.submenuOTList.Text = "OT列表";
             this.submenuOTList.Click += new System.EventHandler(this.submenuOTList_Click);
             // 
@@ -934,6 +935,11 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "位置(mm)：";
             // 
+            // timerLog
+            // 
+            this.timerLog.Interval = 1000;
+            this.timerLog.Tick += new System.EventHandler(this.timerLog_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1042,5 +1048,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBoxFocusPos;
         private System.Windows.Forms.ToolStripMenuItem submenuOTList;
+        private System.Windows.Forms.Timer timerLog;
     }
 }

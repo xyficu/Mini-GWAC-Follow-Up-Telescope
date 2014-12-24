@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using ASCOM.DriverAccess;
 using XMLConfig;
+using System.IO;
 
 namespace DDMAgent
 {
@@ -162,6 +163,8 @@ namespace DDMAgent
 			tmrRefresh.Enabled = false;
             tmrNetwork.Interval = 100;
             tmrNetwork.Enabled = false;
+            timerLog.Interval = 5000;
+            timerLog.Enabled = false;
 
 			m_serverIP = m_config.GetParamValue("Server", "IP", "127.0.0.1");
 			m_serverPort = Convert.ToInt32(m_config.GetParamValue("Server", "Port", "0"));
@@ -193,6 +196,9 @@ namespace DDMAgent
 			// 关闭线程
 			if (tmrRefresh.Enabled == true) tmrRefresh.Enabled = false;
             if (tmrNetwork.Enabled == true) tmrNetwork.Enabled = false;
+
+            if (timerLog.Enabled == true) timerLog.Enabled = false;
+
             if (timerFocusStatus.Enabled == true) timerFocusStatus.Enabled = false;
 			// 恢复望远镜至安全位置
 			if (IScope != null) IScope.Dispose();
@@ -292,6 +298,10 @@ namespace DDMAgent
                 {
                     timerFocusStatus.Enabled = true;
                 }
+                if (timerLog.Enabled == false)
+                {
+                    timerLog.Enabled = true;
+                }
 			}
 			catch(COMException ex)
 			{
@@ -330,6 +340,7 @@ namespace DDMAgent
 			// 与望远镜断开前, 需复位并等待复位完成
 			tmrRefresh.Enabled = false;
             timerFocusStatus.Enabled = false;
+            timerLog.Enabled = false;
 			m_bScopeConnect = false;
             IScope.Connected = false;
             //if(IFocus != null && IFocus.Connected == true) IFocus.Connected = false;
@@ -586,6 +597,7 @@ namespace DDMAgent
 			lblState.Text = "Slew...";
 			if (IScope.CanSlewAsync) IScope.SlewToTargetAsync();
 			else IScope.SlewToTarget();
+            
 		}
 
 		private void btnStop_Click(object sender, EventArgs e)
@@ -671,6 +683,34 @@ namespace DDMAgent
             }
         }
 
+        /// <summary>
+        /// 记录调焦器的距离和温度
+        /// </summary>
+        /// <param name="tem"></param>
+        /// <param name="pos"></param>
+        private void LogFocusPosAndTem(string tem, string pos)
+        {
+            string dir = Environment.CurrentDirectory;
+            DateTime dt = DateTime.Now;
+            DateTime dtUTC = DateTime.UtcNow;
+
+            string fileDate = dtUTC.Year.ToString() + "-" + dtUTC.Month.ToString() + "-" + dtUTC.Day.ToString();
+            FileStream fs = new FileStream(dir + "\\focus_log_UTC_" + fileDate + ".txt", FileMode.Append);
+            StreamWriter sw = new StreamWriter(fs);
+
+            
+            
+            sw.Write(dt.ToString() + " ");
+            sw.Write(pos + " ");
+            sw.Write(tem + " ");
+            sw.WriteLine("");
+            
+            sw.Flush();
+
+            sw.Close();
+            fs.Close();
+        }
+
         private void timerFocusStatus_Tick(object sender, EventArgs e)
         {
             
@@ -714,7 +754,8 @@ namespace DDMAgent
                     //textBoxTeleInfo.Text += "CanSetPierSide" + IScope.CanSetPierSide.ToString();
                     //textBoxTeleInfo.Text += "CanSetRightAscensionRate" + IScope.CanSetRightAscensionRate.ToString();
                     //textBoxTeleInfo.Text = IScope.UTCDate.ToUniversalTime().ToString();
-   
+                    
+                    
                 }
                 
             }
@@ -822,6 +863,23 @@ namespace DDMAgent
             frmOTList otList = new frmOTList(this);
             otList.StartPosition = FormStartPosition.CenterParent;
             otList.Show();
+        }
+
+        private void timerLog_Tick(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                if (null != IFocus)
+                {
+                    //保存焦距和温度
+                    LogFocusPosAndTem(IFocus.Temperature.ToString("f1"), (IFocus.Position / 1000.0).ToString());
+                }
+            }
+            catch (System.Exception ex)
+            {
+                m_strError = ex.Message;
+            }
         }
 	}
 }

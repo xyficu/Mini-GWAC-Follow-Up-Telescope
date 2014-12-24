@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MGFT", "MGFT.csproj", "{08F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTClient", "..\OTClient\OTClient.csproj", "{3475F889-3E17-4273-8F4B-6C49F8F3CAC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OTScheduler", "..\OTScheduler\OTScheduler.csproj", "{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{3475F889-3E17-4273-8F4B-6C49F8F3CAC6}.Release|Mixed Platforms.Build.0 = Release|x86
 		{3475F889-3E17-4273-8F4B-6C49F8F3CAC6}.Release|x86.ActiveCfg = Release|x86
 		{3475F889-3E17-4273-8F4B-6C49F8F3CAC6}.Release|x86.Build.0 = Release|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Debug|x86.ActiveCfg = Debug|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Debug|x86.Build.0 = Debug|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Release|Any CPU.ActiveCfg = Release|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Release|Mixed Platforms.Build.0 = Release|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Release|x86.ActiveCfg = Release|x86
+		{34C91A9A-2A4D-4BEF-BD82-C50762AF8BD6}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
